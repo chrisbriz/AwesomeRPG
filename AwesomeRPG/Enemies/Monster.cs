@@ -7,6 +7,7 @@ namespace AwesomeRPG.Enemies
     abstract class Monster : IMonster
     {
         public int Hp { get; set; }
+        public int Armor { get; set; }
         public string Name { get; set; }
         public int Gold { get; set; }
         public int Strength { get; set; }

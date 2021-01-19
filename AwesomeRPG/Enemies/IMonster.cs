@@ -7,6 +7,7 @@ namespace AwesomeRPG.Enemies
     interface IMonster
     {
         int Hp { get; set; }
+        int Armor { get; set; }
         string Name { get; set; }
         int Gold { get; set; }
         int Strength { get; set; }

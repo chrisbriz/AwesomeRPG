@@ -17,7 +17,9 @@ namespace AwesomeRPG.Adventuring
             Console.WriteLine("");
 
             CharacterCreation.CreatePlayer();
-          
+
+
+            
 
             Console.ReadLine();
         }
