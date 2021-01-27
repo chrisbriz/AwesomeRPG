@@ -5,10 +5,9 @@ using System.Text;
 
 namespace AwesomeRPG.Adventuring
 {
-    public class Start
+    class Start
     {
-        private bool lostGame, wonGame;
-        
+        public static IPlayer player;
         public static void GoAdventuring()
         {
             Console.WriteLine("*************************");
@@ -16,12 +15,38 @@ namespace AwesomeRPG.Adventuring
             Console.WriteLine("*************************");
             Console.WriteLine("");
 
-            CharacterCreation.CreatePlayer();
-
-
+            CreatePlayer();
+            Console.Clear();
+            Exploring.LetsGo();
             
 
             Console.ReadLine();
+
+
+        }
+
+        static void CreatePlayer()
+        {
+
+            Console.WriteLine("Choose a Class:");
+            Console.WriteLine("1.Warrior");
+            Console.WriteLine("2.Mage");
+            Console.WriteLine("3.Ranger");
+
+            var cki = Console.ReadKey();
+
+            if (cki.Key == ConsoleKey.D1 || cki.Key == ConsoleKey.NumPad1)
+            {
+                player = CharacterCreation.CreateWarrior();
+            }
+            else if (cki.Key == ConsoleKey.D2 || cki.Key == ConsoleKey.NumPad2)
+            {
+                player = CharacterCreation.CreateMage();
+            }
+            else if (cki.Key == ConsoleKey.D3 || cki.Key == ConsoleKey.NumPad3)
+            {
+                player = CharacterCreation.CreateRanger();
+            }
         }
     }
 }

@@ -6,14 +6,20 @@ namespace AwesomeRPG.Player
 {
     class Warrior : Player
     {
-        public override int Attack(int dmg)
+        public override double Attack()
         {
-            return base.Attack(dmg);
+            var attack = Strength;
+            Random rnd = new Random();
+            var damageModifier = rnd.Next(1, 3);
+
+            var damage = damageModifier * attack;
+
+            return damage;
         }
 
-        public override void TakeDamage()
+        public override IPlayer LevelUp(int exp, int expToLvl)
         {
-            base.TakeDamage();
+            return base.LevelUp(exp, expToLvl);
         }
     }
 }

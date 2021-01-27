@@ -1,5 +1,6 @@
 ﻿using System;
 using AwesomeRPG.Adventuring;
+using AwesomeRPG.Player;
 
 namespace AwesomeRPG
 {
@@ -7,7 +8,8 @@ namespace AwesomeRPG
     {
         static void Main(string[] args)
         {
-            Start.GoAdventuring();
+
+        Start.GoAdventuring();
         }
     }
 }

@@ -6,14 +6,14 @@ namespace AwesomeRPG.Player
 {
     class Ranger : Player
     {
-        public override int Attack(int dmg)
+        public override double Attack()
         {
-            return base.Attack(dmg);
+            return base.Attack();
         }
 
-        public override void TakeDamage()
+        public override IPlayer LevelUp(int exp, int expToLvl)
         {
-            base.TakeDamage();
+            return base.LevelUp(exp, expToLvl);
         }
     }
 }

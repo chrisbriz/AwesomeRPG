@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AwesomeRPG.Enemies
 {
-    class Goblin : Monster
+    class Wolf : Monster
     {
         public override int Attack(int dmg)
         {

@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="CombatLogic\" />
     <Folder Include="Shop\" />
   </ItemGroup>
 

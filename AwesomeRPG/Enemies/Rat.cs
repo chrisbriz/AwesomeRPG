@@ -10,15 +10,5 @@ namespace AwesomeRPG.Enemies
         {
             return base.Attack(dmg);
         }
-
-        public override void DropGold()
-        {
-            base.DropGold();
-        }
-
-        public override void TakeDamage()
-        {
-            base.TakeDamage();
-        }
     }
 }

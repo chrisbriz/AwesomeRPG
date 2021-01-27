@@ -6,22 +6,24 @@ namespace AwesomeRPG.Player
 {
     interface IPlayer
     {
+        IPlayer player { get; set; }
         string Name { get; set; }
-        int Hp { get; set; }
+        double Hp { get; set; }
+        double MaxHp { get; set; }
         int Gold { get; set; }
-        int Strength { get; set; }
-        int Intelligence { get; set; }
-        int Agility { get; set; }
+        double Strength { get; set; }
+        double Intelligence { get; set; }
+        double Agility { get; set; }
         int Exp { get; set; }
         int ExpToLevel { get; set; }
         int Level { get; set; }
         Random rnd { get; set; }
-        
-        
-        int Attack(int dmg);
-
-        void TakeDamage();
+        string Class { get; set; }
 
 
+
+        double Attack();
+
+        IPlayer LevelUp(int exp, int expToLvl);
     }
 }
