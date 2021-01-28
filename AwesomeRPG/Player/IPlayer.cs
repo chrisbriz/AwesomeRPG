@@ -6,7 +6,6 @@ namespace AwesomeRPG.Player
 {
     interface IPlayer
     {
-        IPlayer player { get; set; }
         string Name { get; set; }
         double Hp { get; set; }
         double MaxHp { get; set; }
@@ -17,7 +16,6 @@ namespace AwesomeRPG.Player
         int Exp { get; set; }
         int ExpToLevel { get; set; }
         int Level { get; set; }
-        Random rnd { get; set; }
         string Class { get; set; }
 
 
@@ -25,5 +23,6 @@ namespace AwesomeRPG.Player
         double Attack();
 
         IPlayer LevelUp(int exp, int expToLvl);
+        void CheckCharacter(IPlayer player);
     }
 }

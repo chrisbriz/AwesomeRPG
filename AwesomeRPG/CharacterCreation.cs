@@ -66,8 +66,8 @@ namespace AwesomeRPG
             newRanger.Hp = rnd.Next(60, 100);
             newRanger.MaxHp = newRanger.Hp;
             newRanger.Strength = rnd.Next(3, 5);
-            newRanger.Intelligence = rnd.Next(12, 15);
-            newRanger.Agility = rnd.Next(5, 8);
+            newRanger.Intelligence = rnd.Next(5, 8);
+            newRanger.Agility = rnd.Next(12, 15);
             newRanger.Gold = 0;
             newRanger.Exp = 0;
             newRanger.ExpToLevel = 20;

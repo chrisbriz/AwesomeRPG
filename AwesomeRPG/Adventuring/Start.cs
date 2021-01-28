@@ -16,6 +16,10 @@ namespace AwesomeRPG.Adventuring
             Console.WriteLine("");
 
             CreatePlayer();
+            if (player == null)
+            {
+                Environment.Exit(0);
+            }
             Console.Clear();
             Exploring.LetsGo();
             
@@ -32,6 +36,7 @@ namespace AwesomeRPG.Adventuring
             Console.WriteLine("1.Warrior");
             Console.WriteLine("2.Mage");
             Console.WriteLine("3.Ranger");
+            Console.WriteLine("0.Exit Game");
 
             var cki = Console.ReadKey();
 
@@ -46,6 +51,10 @@ namespace AwesomeRPG.Adventuring
             else if (cki.Key == ConsoleKey.D3 || cki.Key == ConsoleKey.NumPad3)
             {
                 player = CharacterCreation.CreateRanger();
+            }
+            else if (cki.Key == ConsoleKey.D4 || cki.Key == ConsoleKey.NumPad4)
+            {
+                player = null;
             }
         }
     }

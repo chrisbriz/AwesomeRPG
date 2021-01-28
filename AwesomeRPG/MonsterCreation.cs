@@ -18,9 +18,9 @@ namespace AwesomeRPG
                 newBat.Level = 1;
             }
             newBat.Name = "Bat";
-            newBat.Hp = rnd.Next(30, 50) + Start.player.Level;
-            newBat.Strength = rnd.Next(3, 7) + Start.player.Level;
-            newBat.Armor = rnd.Next(0, 3) + Start.player.Level;
+            newBat.Hp = rnd.Next(30, 50) + newBat.Level;
+            newBat.Strength = rnd.Next(3, 7) * newBat.Level;
+            newBat.Armor = rnd.Next(0, 3) * newBat.Level;
             newBat.Exp = Start.player.Level * newBat.Level + 20;
 
             return newBat;
@@ -36,9 +36,9 @@ namespace AwesomeRPG
                 newRat.Level = 1;
             }
             newRat.Name = "Rat";
-            newRat.Hp = rnd.Next(60, 80) + Start.player.Level;
-            newRat.Strength = rnd.Next(7, 12) + Start.player.Level;
-            newRat.Armor = rnd.Next(2, 4) + Start.player.Level;
+            newRat.Hp = rnd.Next(60, 80) + newRat.Level;
+            newRat.Strength = rnd.Next(7, 12) * newRat.Level;
+            newRat.Armor = rnd.Next(2, 4) * newRat.Level;
             newRat.Exp = Start.player.Level * newRat.Level + 25;
 
             return newRat;
@@ -54,9 +54,9 @@ namespace AwesomeRPG
                 newWolf.Level = 1;
             }
             newWolf.Name = "Wolf";
-            newWolf.Hp = rnd.Next(200, 240) + Start.player.Level;
-            newWolf.Strength = rnd.Next(9, 15) + Start.player.Level;
-            newWolf.Armor = rnd.Next(5, 7) + Start.player.Level;
+            newWolf.Hp = rnd.Next(200, 240) + newWolf.Level;
+            newWolf.Strength = rnd.Next(9, 15) * newWolf.Level;
+            newWolf.Armor = rnd.Next(5, 7) * newWolf.Level;
             newWolf.Exp = Start.player.Level * newWolf.Level + 30;
 
             return newWolf;
@@ -72,9 +72,9 @@ namespace AwesomeRPG
                 newGoblin.Level = 1;
             }
             newGoblin.Name = "Goblin";
-            newGoblin.Hp = rnd.Next(300, 400) + Start.player.Level;
-            newGoblin.Strength = rnd.Next(12, 18) + Start.player.Level;
-            newGoblin.Armor = rnd.Next(7, 9) + Start.player.Level;
+            newGoblin.Hp = rnd.Next(300, 400) + newGoblin.Level;
+            newGoblin.Strength = rnd.Next(12, 18) * newGoblin.Level;
+            newGoblin.Armor = rnd.Next(7, 9) * newGoblin.Level;
             newGoblin.Exp = Start.player.Level * newGoblin.Level + 40;
 
             return newGoblin;
@@ -91,9 +91,9 @@ namespace AwesomeRPG
                 newTroll.Level = 1;
             }
             newTroll.Name = "Troll";
-            newTroll.Hp = rnd.Next(500, 1000) + Start.player.Level;
-            newTroll.Strength = rnd.Next(25, 30) + Start.player.Level;
-            newTroll.Armor = rnd.Next(10, 15) + Start.player.Level;
+            newTroll.Hp = rnd.Next(500, 1000) + newTroll.Level;
+            newTroll.Strength = rnd.Next(25, 30) * newTroll.Level;
+            newTroll.Armor = rnd.Next(10, 15) * newTroll.Level;
             newTroll.Exp = Start.player.Level * newTroll.Level + 50;
 
             return newTroll;

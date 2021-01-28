@@ -15,7 +15,6 @@ namespace AwesomeRPG.Enemies
 
         bool IsDead { get; set; }
         int Level { get; set; }
-        Random Rnd { get; set; }
 
         int Attack(int dmg);
         int DropGold(int gold);

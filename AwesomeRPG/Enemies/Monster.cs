@@ -12,7 +12,6 @@ namespace AwesomeRPG.Enemies
         public int Gold { get; set; }
         public int Strength { get; set; }
         public int Exp { get; set; }
-        public Random Rnd { get; set; }
         public int Level { get; set; }
         public bool IsDead { get; set; }
 

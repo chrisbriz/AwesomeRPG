@@ -10,5 +10,10 @@ namespace AwesomeRPG.Enemies
         {
             return base.Attack(dmg);
         }
+
+        public override int DropGold(int level)
+        {
+            return base.DropGold(level)+15;
+        }
     }
 }
