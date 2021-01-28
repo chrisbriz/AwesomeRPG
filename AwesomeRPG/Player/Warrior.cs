@@ -7,29 +7,6 @@ namespace AwesomeRPG.Player
 {
     class Warrior : Player
     {
-        //public Warrior() : base() { }
-
-        //public Warrior(double hp,
-        //    double maxHp,
-        //    int gold,
-        //    double str,
-        //    double intel,
-        //    double agi,
-        //    int xp,
-        //    int xpToLvl,
-        //    string name,
-        //    string charClass) : base(hp,
-        //    maxHp,
-        //    gold,
-        //    str,
-        //    intel,
-        //    agi,
-        //    xp,
-        //    xpToLvl,
-        //    name,
-        //    charClass)
-        //{ }
-
         public override double Attack()
         {
             var attack = Strength;

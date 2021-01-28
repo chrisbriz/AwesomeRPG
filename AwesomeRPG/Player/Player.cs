@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AwesomeRPG.Equipment;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace AwesomeRPG.Player
@@ -16,32 +18,8 @@ namespace AwesomeRPG.Player
         public int Level { get; set; }
         public string Name { get; set; }
         public string Class { get; set; }
-
-        //public Player() { }
-
-        //public Player(
-        //    double hp,
-        //    double maxHp,
-        //    int gold,
-        //    double str,
-        //    double intel,
-        //    double agi,
-        //    int xp,
-        //    int xpToLvl,
-        //    string name,
-        //    string charClass)
-        //{
-        //    Hp = hp;
-        //    MaxHp = maxHp;
-        //    Gold = gold;
-        //    Strength = str;
-        //    Intelligence = intel;
-        //    Agility = agi;
-        //    Exp = xp;
-        //    ExpToLevel = xpToLvl;
-        //    Name = name;
-        //    Class = charClass;
-        //}
+        public List<IConsumable> Consumables { get; set; }
+        public List<IEquipable> Equipements { get; set; }
 
         public virtual double Attack()
         {

@@ -9,29 +9,6 @@ namespace AwesomeRPG.Player
 {
     class Mage : Player
     {
-        //public Mage() : base() { }
-
-        //public Mage(double hp,
-        //    double maxHp,
-        //    int gold,
-        //    double str,
-        //    double intel,
-        //    double agi,
-        //    int xp,
-        //    int xpToLvl,
-        //    string name,
-        //    string charClass) : base(hp,
-        //    maxHp,
-        //    gold,
-        //    str,
-        //    intel,
-        //    agi,
-        //    xp,
-        //    xpToLvl,
-        //    name,
-        //    charClass)
-        //{ }
-
         public override double Attack()
         {
             var attack = Intelligence;
@@ -60,24 +37,5 @@ namespace AwesomeRPG.Player
 
             return player;
         }
-
-        //public override void CheckCharacter(IPlayer player)
-        //{
-        //    Console.WriteLine($"Name: {player.Name}");
-        //    Console.WriteLine($"Level: {player.Level}");
-        //    Console.WriteLine($"Class: {player.Class}"); 
-        //    Console.WriteLine($"Health: {player.Hp}"); 
-        //    Console.WriteLine($"Max Health: {player.MaxHp}"); 
-        //    Console.WriteLine($"Strenght: {player.Strength}"); 
-        //    Console.WriteLine($"Intelligence: {player.Intelligence}"); 
-        //    Console.WriteLine($"Agility: {player.Agility}"); 
-        //    Console.WriteLine($"Gold: {player.Gold}"); 
-        //    Console.WriteLine($"Experience: {player.Exp}"); 
-        //    Console.WriteLine($"Next level: {player.ExpToLevel}");
-
-
-
-        //    return string.Join("\r\n", player.GetType().GetProperties().Select(prop => prop.GetValue(player)));
-        //}
     }
 }

@@ -83,7 +83,7 @@ namespace AwesomeRPG.Adventuring
                 var playerDamage = player.Attack();
                 var monsterDamage = monster.Attack(monster.Strength);
                 Console.WriteLine($"You attack and deal {playerDamage} damage!");
-                monster.Hp -= playerDamage;
+                monster.Hp -= playerDamage - monster.Armor;
                 Console.WriteLine($"{monster.Name} has {monster.Hp} HP left");
                 if (monster.Hp <= 0)
                 {

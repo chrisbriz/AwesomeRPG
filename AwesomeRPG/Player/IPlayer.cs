@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AwesomeRPG.Equipment;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -17,7 +18,8 @@ namespace AwesomeRPG.Player
         int ExpToLevel { get; set; }
         int Level { get; set; }
         string Class { get; set; }
-
+        List<IConsumable> Consumables { get; set; }
+        List<IEquipable> Equipements { get; set; }
 
 
         double Attack();

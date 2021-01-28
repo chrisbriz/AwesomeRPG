@@ -4,9 +4,7 @@ using System.Text;
 
 namespace AwesomeRPG.Equipment
 {
-    interface IArmors
+    class StrElixir : Elixirs
     {
-        public int Price { get; set; }
-        public int Resist { get; set; }
     }
 }

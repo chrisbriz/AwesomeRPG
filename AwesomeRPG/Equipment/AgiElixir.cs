@@ -4,10 +4,7 @@ using System.Text;
 
 namespace AwesomeRPG.Equipment
 {
-    interface IConsumables
+    class AgiElixir : Elixirs
     {
-        public int Price { get; set; }
-        public int Amount { get; set; }
-
     }
 }
