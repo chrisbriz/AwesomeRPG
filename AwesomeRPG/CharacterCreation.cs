@@ -3,6 +3,7 @@ using AwesomeRPG.Adventuring;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using AwesomeRPG.Equipment;
 
 namespace AwesomeRPG
 {
@@ -25,6 +26,9 @@ namespace AwesomeRPG
             newWar.Level = 1;
             newWar.ExpToLevel = 20 * newWar.Level;
             newWar.Class = "Warrior";
+            newWar.Weapon = new Weapons { Name = "hands", Type = "Weapon", StatType = 0, Price = 0 };
+            newWar.Armor = new Armors { Name = "Apron", Type = "Armor", StatType = 0, Price = 0 };
+            newWar.Consumable = null;
             Console.Write("Enter your Name: ");
             newWar.Name = Console.ReadLine();
             
@@ -39,7 +43,7 @@ namespace AwesomeRPG
             Console.SetCursorPosition(0, Console.CursorTop);
             Random rnd = new Random();
             Mage newMage = new Mage();
-            newMage.Hp = rnd.Next(60, 100);
+            newMage.Hp = rnd.Next(80, 120);
             newMage.MaxHp = newMage.Hp;
             newMage.Strength = rnd.Next(3, 5);
             newMage.Intelligence = rnd.Next(12, 15);
@@ -49,6 +53,9 @@ namespace AwesomeRPG
             newMage.ExpToLevel = 20;
             newMage.Level = 1;
             newMage.Class = "Mage";
+            newMage.Weapon = new Weapons { Name = "hands", Type = "Weapon", StatType = 0, Price = 0 };
+            newMage.Armor = new Armors { Name = "Apron", Type = "Armor", StatType = 0, Price = 0 };
+            newMage.Consumable = null;
             Console.Write("Enter your Name: ");
             newMage.Name = Console.ReadLine();
 
@@ -63,7 +70,7 @@ namespace AwesomeRPG
             Console.SetCursorPosition(0, Console.CursorTop);
             Random rnd = new Random();
             Ranger newRanger = new Ranger();
-            newRanger.Hp = rnd.Next(60, 100);
+            newRanger.Hp = rnd.Next(80, 120);
             newRanger.MaxHp = newRanger.Hp;
             newRanger.Strength = rnd.Next(3, 5);
             newRanger.Intelligence = rnd.Next(5, 8);
@@ -73,6 +80,9 @@ namespace AwesomeRPG
             newRanger.ExpToLevel = 20;
             newRanger.Level = 1;
             newRanger.Class = "Ranger";
+            newRanger.Weapon = new Weapons { Name = "hands", Type = "Weapon", StatType = 0, Price = 0 };
+            newRanger.Armor = new Armors { Name = "Apron", Type = "Armor", StatType = 0, Price = 0 };
+            newRanger.Consumable = null;
             Console.Write("Enter your Name: ");
             newRanger.Name = Console.ReadLine();
 

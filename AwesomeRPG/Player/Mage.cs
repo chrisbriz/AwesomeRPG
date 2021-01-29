@@ -1,4 +1,5 @@
 ﻿using AwesomeRPG.Adventuring;
+using AwesomeRPG.Equipment;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,9 +10,16 @@ namespace AwesomeRPG.Player
 {
     class Mage : Player
     {
-        public override double Attack()
+        public override double Attack(IEquipable item)
         {
-            var attack = Intelligence;
+            if (item == null)
+            {
+                item.Name = string.Empty;
+                item.Price = 0;
+                item.StatType = 0;
+                item.Type = "Hands";
+            }
+            var attack = Intelligence + item.StatType;
             Random rnd = new Random();
             var damageModifier = rnd.Next(1, 3);
 
@@ -20,17 +28,16 @@ namespace AwesomeRPG.Player
             return damage;
         }
 
-        public override IPlayer LevelUp(int exp, int expToLvl)
+        public override IPlayer LevelUp(IPlayer player)
         {
-            var player = Start.player;
             player.Level +=  1;
             player.MaxHp *= 2;
             player.Hp = player.MaxHp;
-            player.Strength = Math.Round(player.Strength * 1.1f, 2);
-            player.Intelligence = Math.Round(player.Intelligence * 2.1, 2);
-            player.Agility = Math.Round(player.Agility * 1.3, 2);
+            player.Strength = Math.Round(player.Strength * 1.1);
+            player.Intelligence = Math.Round(player.Intelligence * 2.1);
+            player.Agility = Math.Round(player.Agility * 1.3);
             player.Gold = player.Gold;
-            player.Exp = exp - expToLvl;
+            player.Exp = player.Exp - player.ExpToLevel;
             player.ExpToLevel = player.ExpToLevel * 2;
             player.Class = player.Class;
             player.Name = player.Name;

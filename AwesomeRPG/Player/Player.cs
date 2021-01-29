@@ -7,6 +7,7 @@ namespace AwesomeRPG.Player
 {
     abstract class Player : IPlayer
     {
+
         public double Hp { get; set; }
         public double MaxHp { get; set; }
         public int Gold { get; set; }
@@ -17,17 +18,18 @@ namespace AwesomeRPG.Player
         public int ExpToLevel { get; set; }
         public int Level { get; set; }
         public string Name { get; set; }
-        public string Class { get; set; }
-        public List<IConsumable> Consumables { get; set; }
-        public List<IEquipable> Equipements { get; set; }
+        public string Class { get; set; }       
+        public IEquipable Weapon { get; set; }
+        public IEquipable Armor { get; set; }
+        public List<IConsumable> Consumable { get; set; }
 
-        public virtual double Attack()
+        public virtual double Attack(IEquipable item)
         {
             double damage = 1;
             return damage;
         }
 
-        public virtual IPlayer LevelUp(int exp, int expToLvl)
+        public virtual IPlayer LevelUp(IPlayer player)
         {
             return null;
         }
@@ -42,6 +44,25 @@ namespace AwesomeRPG.Player
             Console.WriteLine($"Strenght: {player.Strength}");
             Console.WriteLine($"Intelligence: {player.Intelligence}");
             Console.WriteLine($"Agility: {player.Agility}");
+            Console.WriteLine($"Weapon: {player.Weapon.Name}");
+            Console.WriteLine($"---Damage: {player.Weapon.StatType}");
+            Console.WriteLine($"Armor: {player.Armor.Name}");
+            Console.WriteLine($"---Damage Reduction: {player.Armor.StatType}");
+            int count = 0;
+            IConsumable healthPotion = new Potions();
+            if (player.Consumable != null)
+            {                
+                foreach (var item in player.Consumable)
+                {
+                    count++;
+                }
+                healthPotion = player.Consumable.Find(x => x.Name == "Health Potion");
+                Console.WriteLine($"{healthPotion.Name} x {count}");
+            }
+            else
+            {
+                Console.WriteLine("you have no potions");
+            }            
             Console.WriteLine($"Gold: {player.Gold}");
             Console.WriteLine($"Experience: {player.Exp}");
             Console.WriteLine($"Next level: {player.ExpToLevel}");

@@ -18,13 +18,14 @@ namespace AwesomeRPG.Player
         int ExpToLevel { get; set; }
         int Level { get; set; }
         string Class { get; set; }
-        List<IConsumable> Consumables { get; set; }
-        List<IEquipable> Equipements { get; set; }
+        List<IConsumable> Consumable { get; set; }
+        IEquipable Weapon { get; set; }
+        IEquipable Armor { get; set; }
 
 
-        double Attack();
+        double Attack(IEquipable item);
 
-        IPlayer LevelUp(int exp, int expToLvl);
+        IPlayer LevelUp(IPlayer player);
         void CheckCharacter(IPlayer player);
     }
 }

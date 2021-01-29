@@ -7,7 +7,13 @@ namespace AwesomeRPG.Adventuring
 {
     class Start
     {
-        public static IPlayer player;
+        private static IPlayer _player;
+
+        public Start(IPlayer player)
+        {
+            _player = player;
+        }
+
         public static void GoAdventuring()
         {
             Console.WriteLine("*************************");
@@ -16,17 +22,13 @@ namespace AwesomeRPG.Adventuring
             Console.WriteLine("");
 
             CreatePlayer();
-            if (player == null)
+            if (_player == null)
             {
                 Environment.Exit(0);
             }
             Console.Clear();
-            Exploring.LetsGo();
-            
-
-            Console.ReadLine();
-
-
+            Exploring.LetsGo(_player);
+         
         }
 
         static void CreatePlayer()
@@ -42,19 +44,19 @@ namespace AwesomeRPG.Adventuring
 
             if (cki.Key == ConsoleKey.D1 || cki.Key == ConsoleKey.NumPad1)
             {
-                player = CharacterCreation.CreateWarrior();
+                _player = CharacterCreation.CreateWarrior();
             }
             else if (cki.Key == ConsoleKey.D2 || cki.Key == ConsoleKey.NumPad2)
             {
-                player = CharacterCreation.CreateMage();
+                _player = CharacterCreation.CreateMage();
             }
             else if (cki.Key == ConsoleKey.D3 || cki.Key == ConsoleKey.NumPad3)
             {
-                player = CharacterCreation.CreateRanger();
+                _player = CharacterCreation.CreateRanger();
             }
             else if (cki.Key == ConsoleKey.D4 || cki.Key == ConsoleKey.NumPad4)
             {
-                player = null;
+                _player = null;
             }
         }
     }
